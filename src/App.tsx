@@ -7,8 +7,8 @@ function App() {
 
   return (
     <>
-      <GlobalStyled />
       <Routes />
+      <GlobalStyled />
     </>
   );
 }
