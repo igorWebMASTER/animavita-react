@@ -9,6 +9,11 @@ export default function CardItem({ character }: any) {
       <S.CoverContent>
         <S.CardCharacterName>{character?.attributes?.canonicalTitle}</S.CardCharacterName>
         <S.CardCharacterBio>{character?.attributes?.description}</S.CardCharacterBio>
+        <S.CardCharacterName>Popularity rank</S.CardCharacterName>
+        <S.CardCharacterText>{character?.attributes?.popularityRank}</S.CardCharacterText>
+        <S.CardCharacterName>Number of episodes</S.CardCharacterName>
+        <S.CardCharacterText>{character?.attributes?.episodeCount}</S.CardCharacterText>
+        <S.CardCharacterText><a href={`https://www.youtube.com/watch?v=${character?.attributes?.youtubeVideoId}`} target="_blank">See online video</a></S.CardCharacterText>
       </S.CoverContent>
     </S.CardItemContainer>
   )
