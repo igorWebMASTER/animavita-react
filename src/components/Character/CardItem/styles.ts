@@ -8,7 +8,9 @@ export const CardItemContainer =  styled.div`
   background-color: white;
   border-radius: 8px;
   overflow: hidden;
-
+  transition: box-shadow 0.3s;
+  overflow: auto;
+  border: 1px solid #ccc;
   cursor: pointer;
 
   margin-right: 25px;

@@ -3,15 +3,14 @@ import * as S from './styled';
 import { Header } from 'components/Header';
 import { getCharacterInfo } from 'app/api';
 import Character from 'components/Character';
-import { AnimeProps } from 'types/character';
 
-type CharactersProps = {
+type AnimeProps = {
   results: AnimeProps[];
   next: string;
 }
 
 export function Home() {
-  const [animes, setCharacters] = useState<CharactersProps>({
+  const [animes, setCharacters] = useState<AnimeProps>({
     results: [],
     next: '',
   });
@@ -40,7 +39,7 @@ export function Home() {
         <S.AnimeContent>
           <Header />
           <Character
-            characters={animes?.results}
+            animes={animes?.results as any}
             onHandleFetchMoreCharacters={() => handleGetCharacters(animes?.next)}
           />
         </S.AnimeContent>
