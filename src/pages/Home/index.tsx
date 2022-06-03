@@ -30,7 +30,7 @@ export function Home() {
         next: response?.links?.next,
       }))
     } catch (error) {
-      alert('Ocorreu um erro ao buscar os items');
+      alert('Ocorreu um erro ao buscar os animes');
     }
   }, [animes]);
 

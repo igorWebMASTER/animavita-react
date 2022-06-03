@@ -26,7 +26,7 @@ export const CardCharacterName =  styled.h1`
 
 export const CardCharacterBio =  styled.p`
   font-size: 1.5rem;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
   width: 100%;
   text-overflow: ellipsis;
 `
@@ -41,14 +41,13 @@ export const CardCharacterInfo =  styled.p`
 export const CardCoverImg =  styled.div<{ src?: string }>`
   width: 100%;
   background-image: url(${props => props.src || ''});
-  background-size: contain;
+  background-size: cover;
   border-radius: 8px;
+  box-shadow: inset 0 0 100px black;
   position: relative;
   transition: all .4s cubic-bezier(0.175, 0.885, 0, 1);
-  box-shadow: var(--shadow-elevation-medium);
 
   &:hover{
-    box-shadow: 0px 13px 10px -7px rgba(0, 0, 0,0.1);
     transform: scale(1.10, 1.10);
   }
 `
@@ -86,4 +85,9 @@ export const CoverContent =  styled.div`
   &:hover{
     height: 100%;
   }
+`
+
+
+export const CardCharacterText = styled.p`
+  font-size: 1.5rem;
 `
