@@ -16,7 +16,7 @@ export default function Character({ animes, onHandleFetchMoreCharacters }: Anime
         loader={<Loading />}
       >
         <S.CardCharacterContainer>
-          {animes && animes.map((animes: any, index: number) => (
+          {animes && animes.map((animes: Anime, index: number) => (
             <CardItem key={index + 2} animes={animes as any} />
           ))}
         </S.CardCharacterContainer>
