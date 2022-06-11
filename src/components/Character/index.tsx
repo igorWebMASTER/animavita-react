@@ -4,8 +4,24 @@ import * as S from './styles'
 import InfiniteScroll from "react-infinite-scroll-component";
 import { Loading } from 'components/Loading';
 import { Anime, AnimeProps } from 'types/anime';
+import { Variants, motion } from 'framer-motion';
 
 export default function Character({ animes, onHandleFetchMoreCharacters }: AnimeProps) {
+
+
+  const cardVariants = {
+    offscreen: {
+      y: 300
+    },
+    onscreen: {
+      y: 50,
+      transition: {
+        type: "spring",
+        bounce: 0.4,
+        duration: 0.8
+      }
+    }
+  };
 
   return (
     <>
@@ -17,7 +33,16 @@ export default function Character({ animes, onHandleFetchMoreCharacters }: Anime
       >
         <S.CardCharacterContainer>
           {animes && animes.map((animes: Anime, index: number) => (
-            <CardItem key={index + 2} animes={animes as any} />
+            <motion.div
+              className="card-container"
+              initial="offscreen"
+              whileInView="onscreen"
+              viewport={{ once: true, amount: 0.8 }}
+            >
+              <motion.div variants={cardVariants}>
+                <CardItem key={index + 2} animes={animes as any} />
+              </motion.div>
+            </motion.div>
           ))}
         </S.CardCharacterContainer>
       </InfiniteScroll>

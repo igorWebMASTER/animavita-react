@@ -9,7 +9,7 @@ export const CardItemContainer = styled.div`
   border-radius: 8px;
   overflow: hidden;
   transition: box-shadow 0.3s;
-  border: 1px solid #ccc;
+  border: 1px solid var(--border-color);
   cursor: pointer;
 
   margin-right: 25px;
@@ -18,6 +18,7 @@ export const CardItemContainer = styled.div`
   border-radius: 12px;
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0, 1);
   box-shadow: var(--shadow-elevation-medium);
+
 `;
 
 export const CardCharacterName = styled.h1`

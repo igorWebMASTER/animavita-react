@@ -4,6 +4,7 @@ export default createGlobalStyle`
   :root {
     --title-color: #52525B;
     --shadow-color: 286deg 09% 58%;
+    --border-color: #F0F0F5;
     --shadow-elevation-low:
       0px 0.6px 0.7px hsl(var(--shadow-color) / 0.34),
       0px 1px 1.1px -1.3px hsl(var(--shadow-color) / 0.33),
@@ -48,6 +49,8 @@ export default createGlobalStyle`
     .map{
       background-color: #1F1F1F;
     }
+
+    --border-color: #1F1F1F;
 
     --title-color: #fff;
   }
